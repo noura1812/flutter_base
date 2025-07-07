@@ -23,11 +23,7 @@ class CustomInterceptor extends Interceptor {
         preferencesRepository.getValueByKey(AppConstants.businessIdKey);
 
     if (options.data is FormData) {
-      final Map<String, dynamic> bodyMap = {};
-      bodyMap.addEntries(options.data.fields);
-
-      if (businessId != null) bodyMap['business_id'] = '$businessId';
-      options.data = FormData.fromMap(bodyMap);
+      
       debugPrint("FormData =>  RequestBody: ${jsonEncode(bodyMap)}");
     } else if (options.data is Map<String, dynamic>) {
       final body = options.data as Map<String, dynamic>;
