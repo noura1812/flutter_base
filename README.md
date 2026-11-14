@@ -1,16 +1,38 @@
-# zewail
+# Flutter Base
 
-A new Flutter project.
+Flutter project with the internal package name `zewail`.
 
-## Getting Started
+## Stack declared in pubspec.yaml
 
-This project is a starting point for a Flutter application.
+- BLoC / flutter_bloc for state management
+- Dio for networking
+- get_it and injectable for dependency injection
+- GoRouter for navigation
+- Equatable and dartz
+- ScreenUtil, SVG and Lottie UI dependencies
 
-A few resources to get you started if this is your first Flutter project:
+These are declared dependencies; their presence alone does not establish implementation coverage.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Requirements
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Use a Flutter SDK bundling Dart compatible with `^3.6.0`, plus platform tooling for your target device.
+
+## Run locally
+
+```sh
+git clone https://github.com/noura1812/flutter_base.git
+cd flutter_base
+flutter pub get
+dart run build_runner build
+flutter run
+```
+
+The project declares generators for dependency injection, routing and API clients.
+
+## Assets
+
+Image, icon, Lottie, SVG and JSON asset directories, and the Cairo font family are declared in the package.
+
+## Project status
+
+Architecture walkthroughs, configuration requirements and screenshots need further documentation. This README does not claim a reusable framework, production readiness or passing tests. Build and test status have not been verified for this documentation update.
